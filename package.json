@@ -1,0 +1,27 @@
+{
+  "name": "techtastes",
+  "version": "1.0.0",
+  "description": "foor ordering web",
+
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abhyudaysharma/TechTastes.git"
+  },
+  "author": "Abhyuday Sharma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Abhyudaysharma/TechTastes/issues"
+  },
+  "homepage": "https://github.com/Abhyudaysharma/TechTastes#readme",
+  "dependencies": {
+    "parcel": "^2.12.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "process": "^0.11.10"
+  }
+}
