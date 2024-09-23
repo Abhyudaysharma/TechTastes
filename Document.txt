@@ -1,0 +1,12 @@
+#header
+    -logo
+    -nav items
+#body
+    -search
+    -restaurantContainer
+    -restaurantCard
+#footer
+    -copyright
+    -links
+    -address
+    -contact
