@@ -10,3 +10,7 @@
     -links
     -address
     -contact
+
+
+    #React Hooks
+     they are normal jf functions
