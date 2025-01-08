@@ -14,3 +14,7 @@
 
     #React Hooks
      they are normal jf functions
+     useState() =it create superPowerful state variables in react
+     useEffect()
+
+     whenever state variables updates, react triggers a reconciliation cycle(re-render the components)
