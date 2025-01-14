@@ -8,8 +8,8 @@ const RestaurantMenu = ()=>{
     },[])
 
     const fetchMenu = async() =>{
-        const data = await fetch(
-            "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.97262329296085&lng=77.59411208888547&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+        const data = await fetch(    
+       "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.4917218&lng=77.2886424&restaurantId=655870&catalog_qa=undefined&submitAction=ENTER"
         );
         const json = await data.json();
         console.log(json);
