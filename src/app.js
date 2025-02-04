@@ -13,7 +13,7 @@ const AppLayout = () => {
   return (
     <div className="app">
       <Header />
-      <Outlet /> {/* it auto filled the path of the route of the page */}
+      <Outlet /> {/* it auto filled the path of the route of the page  */}
       
     </div>
   );

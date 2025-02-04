@@ -18,3 +18,5 @@
      useEffect()
 
      whenever state variables updates, react triggers a reconciliation cycle(re-render the components)
+
+     "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.97262329296085&lng=77.59411208888547&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING" api for the resturant menu card
