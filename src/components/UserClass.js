@@ -1,43 +1,59 @@
 import React from "react";
-class UserClass extends React.Component{
+class Userclass extends React.Component{
+
     constructor(props){
         super(props);
-        this.state={
-            count: 0,
-            count2: 1,
+
+        this.state = {
+            count:1,count2:2,
+            userInfo:{name:"Dummy",
+                location:"Default",
+                
+        
+             },
         };
+        console.log("child contructor");
+    }   
+    async componentDidMount(){
+        //API CALL
 
-        console.log("child constrector");
+        const data = await fetch(" https://api.github.com/users/akshaymarch7");
+        const json = await data.json();
+
+        this.setState({
+            userInfo:json,
+        });
         
     }
-    componentDidMount(){
-        console.log("child component did mounts");
+    
         
-    }
-
-
     render(){
+
         console.log("child render");
-        
-        const {name, Location,Contact} = this.props;
-        const{count, count2} = this.state;
-        // deStructure the props here.
+        // const {name,Location} = this.props;
+        const {name,Location, avatar_url}= this.state.userInfo;
+        debugger;
+        const {count,count2} = this.state;
         return(
-            <div className="user-card">
-                <h1>Count:{count2}</h1>
-                <h1>Count:{count}</h1>
-                <button onClick={()=>{
-                    this.setState({
-                        count: this.state.count+1,
-                        count2: this.state.count+2
-                    })
-                }}>count Increase</button>
-        <h2>Name: {name/**this.props.name*/}</h2>
-        <h2>Loaction: {Location/**this.props.Location*/}</h2>
-        <h2>Contact: {Contact/**this.props.Contact*/}</h2>
-    </div>
+        <div className="user-card">
+
+            <h1>Count = {count}</h1>
+            <button onClick={()=>{
+                this.setState({count: count+1})
+            }}>Count Increse</button>
+            
+            <button onClick={()=>{
+                this.setState({count2: count2 -1})
+            }}>Count Decrease</button>
+
+
+            <h1>Count2 ={count2}</h1>
+            <img src={avatar_url} />
+            <h2>Name: {name}  </h2>
+            <h2>Location: {Location}  </h2>
+            <h2>Contact: 123456789  </h2>
+        </div>
         );
     }
-}
-
-export default UserClass;
+};
+export default Userclass;

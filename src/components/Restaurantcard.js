@@ -1,7 +1,14 @@
 import { CARD_LOGO } from "../utils/constants";
 const RastaurantCard = (props) => {
     const {resData} =props;
-    const {cloudinaryImageId,name,cuisines,avgRating,deliveryTime,costForTwo} = resData?.info;
+    const {
+      cloudinaryImageId,
+      name,
+      cuisines,
+      avgRating,
+      deliveryTime,
+      costForTwo
+    } = resData?.info;
     // destructureing 
     
       return (
